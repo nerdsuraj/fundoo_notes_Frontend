@@ -16,8 +16,7 @@ export class TakeNotesComponent implements OnInit {
 
   usernote: FormGroup ;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private snackbar:MatSnackBar,
-    private UserNotesService:UserNotesService) { }
+  constructor(private formBuilder: FormBuilder,private snackbar:MatSnackBar,  private UserNotesService:UserNotesService) { }
 
   ngOnInit(): void {
     this.usernote = this.formBuilder.group({
