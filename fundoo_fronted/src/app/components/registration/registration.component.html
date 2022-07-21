@@ -1,0 +1,111 @@
+<div  fxLayoutAlign="space-around center"  class="biggerdiv" fxFlex.xs="100">
+<mat-card class="card"  fxFlex="50" fxLayout="row"  fxLayoutGap="35px" fxFlex.xs="100%">
+
+  <div class="left-conatianer" fxFlex.xs="100%" >
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <mat-card-title class="fundoo">
+      <span class="f">F</span>
+      <span class="u">u</span>
+      <span class="n">n</span>
+      <span class="d">d</span>
+      <span class="o">o</span>
+      <span class="o">o</span>
+    </mat-card-title>
+    <br>
+    <mat-card-header>
+      <mat-card-title class="acc">Create your Fundoo Account</mat-card-title>
+    </mat-card-header>
+
+
+    <br>
+
+    <div class="namemain" fxLayout="row" fxLayout.xs="column" fxLayoutGap="5%" >
+
+        <mat-form-field fxFlex.xs="100%" appearance="outline" id="firstname">
+          <mat-label > First name</mat-label>
+          <input matInput placeholder="First name" formControlName="firstName"/>
+          <mat-error>firstname is required</mat-error>
+        </mat-form-field>
+        
+     
+
+      
+        <mat-form-field fxFlex.xs="100" appearance="outline" id="lastname">
+          <mat-label > Last name</mat-label>
+          <input matInput placeholder="Last name" formControlName="lastName"/>
+          <mat-error>lastname is required</mat-error>
+        </mat-form-field>
+        
+    </div>
+    
+
+    <div class="mails">
+
+      <mat-form-field appearance="outline" class="email" >
+        <mat-label>Email id</mat-label>
+        <input matInput placeholder="Enter your email id" formControlName="email"/>
+        <mat-error>email is required</mat-error>
+        <mat-hint class="inside">You can use letter ,number and periods</mat-hint>
+      </mat-form-field>
+      
+    </div>
+
+    <button class="downbutton" mat-button color="primary"> use my current email address instant</button>
+
+   
+
+      <div class="password-main" fxLayout="row" fxLayout.xs="column" fxLayoutGap="5%">
+
+          <mat-form-field appearance="outline" class="password" fxFlex.xs="100">
+            <mat-label>Password</mat-label>
+            <input matInput [type]='inputText'  placeholder="Enter your password" formControlName="password"/>
+            <mat-error>password is required</mat-error>
+          </mat-form-field>
+        
+          <mat-form-field appearance="outline" class="confirm" fxFlex.xs="100">
+            <mat-label>Confirm</mat-label>
+            <input matInput placeholder="Enter your password" formControlName="confirmPassword"/>
+            <mat-error>confirmPassword is required</mat-error>
+          </mat-form-field>
+       
+       
+      </div>
+  
+      <div>
+        <mat-hint class="inside">Use 8 or more characters with numbers & Symbole </mat-hint>
+      </div>
+    
+      <div class="showpassword">
+        <mat-checkbox class="example-margin" (change)="showPassword($event)" >show password</mat-checkbox>
+      </div>
+
+  
+
+  
+    <br>
+
+    <div class="mainbutton" fxLayoutAlign="row" fxLayoutAlign="space-between center" >
+
+      <div class="singininstead">
+        <a routerLink="/login"  mat-button  class="in"> sign in instead</a>
+        <br>
+      </div>
+
+      <div class="signup-in">
+        <button id="signbutton" mat-button mat-raised-button color="primary" mat-button>
+          Next
+        </button>
+      </div>
+
+    </div>
+
+  </form>
+  </div>
+
+  <div class="rightcontainer" fxHide.xs  >
+    <img class="image"  src="assets/img/fundookeep.png" alt="google logo">
+    <h1 class="h1">One account. All of Fandoo working for you.</h1>
+  </div>
+
+</mat-card>
+</div>

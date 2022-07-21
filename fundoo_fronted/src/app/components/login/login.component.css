@@ -1,0 +1,130 @@
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    width: 35%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.459);
+    border-radius: 2%;
+    height: 100%;
+  }
+  .container{
+    margin-right: 50px;
+    padding-bottom: 10%;
+   
+  }
+  .row {
+    height: 40.8vh;
+  }
+  .fundoo {
+    text-align: center;
+    font-family: "Times New Roman";
+    font: bold;
+    margin-top: 05%;
+    font-size: 180%;
+  }
+  .f {
+    color: blue;
+    font-weight: bold;
+    font-family: "Times New Roman";
+    text-align: center;
+  }
+  .u {
+    color: red;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .n {
+    color: yellow;
+    font-weight: bold;
+     font-family: sans-serif;
+    text-align: center;
+  }
+  .d {
+    color: blue;
+    font-weight: bold;
+     font-family: sans-serif;
+    text-align: center;
+  }
+  .o {
+    color: green;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .oo {
+    color: red;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .mat-card-title {
+    text-align: center; 
+    text-transform: uppercase;
+    
+  }
+  .mat-card-subtitle {
+    font-size: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration-color: blue;
+    font-weight:bold;
+  }
+  .email {
+    width: 70%;
+    align-content: center;
+    margin-left: 20%
+  }
+  .sign {
+    font-weight: 100;
+    margin-left: 0%;
+    font-family: sans-serif;
+  }
+
+  .password {
+    width: 70%;
+    align-content: center;
+    /* margin-left: 230px */
+    margin-left: 20%
+  }
+  .pass-link {
+        
+   color: blue;   
+      margin-right: 40px;
+  
+    }
+   
+  .link {
+    color: blue;
+    
+  }
+  #register {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    width: 80%;
+  }
+  #login{
+    background-image: linear-gradient(to right, #000046 0%, #1CB5E0  51%, #000046  100%); 
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+  #login:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  .showpassword{
+    /* border: 1px solid royalblue; */
+    margin-left: 20%;
+  }
+ 

@@ -1,0 +1,86 @@
+.example-container {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.example-sidenav-container{
+ flex: 1;
+}
+/* .apps {
+  display: flex;
+  flex-direction: row;
+  width: 4%;
+} */
+.appwithimage{
+  /* border: 1px solid blue; */
+  width: 10%;
+  margin-left: 15px;
+}
+
+
+.example-toolbar {
+  background-color: inherit;
+  border-bottom-style: ridge;
+  border-color: white;
+  
+}
+
+.search {
+  border-radius: 10%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.02);
+  
+  
+}
+#search {
+  opacity: 0.8;
+ 
+}
+.searchdiv{
+  /* border: 1px solid green; */
+  width: 50%;
+  margin-left: 70px;
+}
+#gridlist {
+ 
+    opacity: 0.6;
+  
+}
+
+.appsview{
+  height: 25px;
+}
+.settingbtn{
+  /* border: 1px solid red; */
+  margin-left: 20px;
+  padding-left: 8%;
+
+  
+  
+}
+.setting{
+  opacity: 0.6;
+}
+#refresh {
+  margin-left: 10%;
+  opacity: 0.8;
+}
+#menu{
+  opacity: 0.6;
+}
+#title{
+  margin-left: 10px;
+  opacity: 0.8;
+}
+#google-keep-logo{
+ height: 40px;
+}
+
+
+
+

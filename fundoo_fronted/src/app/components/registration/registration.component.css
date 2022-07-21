@@ -1,0 +1,224 @@
+
+/* @import "../../scss/colour.scss"; */
+.left-conatianer{
+  margin-left: 25px;
+  /* border: 2px solid green; */
+
+  
+}
+/* .biggerdiv{
+  border:  3px solid red;
+
+} */
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  margin-bottom: 3%;
+  width: 50%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.459);
+  border-radius: 2%;
+  height: 100%;
+}
+
+.fundoo {
+  margin-left: 03%;
+  margin-top: 50px;
+  font-family: sans-serif;
+}
+.f {
+  color: blue;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+.u {
+  color: red;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+.n {
+  color: yellow;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+.d {
+  color: blue;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+.o {
+  color: green;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+.oo {
+  color: red;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+.acc {
+  margin-left: 2px;
+}
+.namemain{
+  /* border:  2px solid blue; */
+  margin-bottom: 2%;
+  /* width: 50%;
+  margin-bottom: 20px; */
+ 
+ 
+  
+  /* block-size: 5%; */
+  /* justify-content: space-between; */
+
+}
+ #firstname {
+  width: 80%;
+  font-size: smaller;
+  
+ 
+} 
+
+#lastname {
+  width: 80%;
+  font-size: smaller;
+}
+
+.names{
+ 
+  font-size:smaller ;
+}
+/* .mails{
+  border: 2px solid darkviolet; 
+  
+} */
+
+.email {
+  width: 100%;
+  font-size:smaller ;
+  margin-bottom: 20px;
+
+}
+.downbutton{
+  padding: 0;
+  margin-bottom: 5px;
+  font-size: small;
+}
+.password {
+  width: 80%;
+  font-size:smaller
+  
+}
+.confirm {
+  width: 80%;
+   /* margin-left: 20px; */
+   font-size:smaller 
+}
+
+
+
+
+.in{
+  margin-top: 10%;
+  text-decoration: unset;
+  /* border: 1px solid red; */
+  color: blue;
+  
+
+  
+
+}
+.inside{
+  font-size: small;
+}
+
+/* .password-main{
+  border: 2px solid red;
+} */
+
+.signup-in {
+   margin-right: 20px;
+   
+}
+.mainbutton{
+  width: 100%;
+  /* border: 2px solid darkslateblue; */
+  height: 10%;
+  
+ 
+}
+
+#signbutton {
+   /* border: 2px solid red; */
+   height: 45px;
+  text-transform: uppercase;
+  
+  }
+ 
+
+.image{
+  width: 200px;
+  height: 200px;
+  /* display: flex; */
+  margin-top: 60%;
+  margin-left: 10px;
+}
+.h1{
+  font-size:medium;
+  text-align: center;
+  padding: 0 15% 15% 10%;
+  width: 65%;
+  /* border: 2px solid rgb(5, 248, 78); */
+
+ }
+  
+/* .rightcontainer{
+  border: 2px solid black;
+  
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  #firstname {
+    width: 100%;
+  }
+
+ #lastname{
+  width: 100%;
+ }
+ .email{
+  width: 100%;
+ }
+ .password{
+  width: 100%;
+ }
+ .confirm{
+  width: 100%;
+ }
+}

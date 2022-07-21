@@ -1,0 +1,66 @@
+/* .maincon{
+    border: 1px solid red;
+} */
+.matcard {
+    margin-top: 3%;
+    box-shadow: 5px 4px 4px 4px rgba(0, 0, 0, 0.3);
+    /* border: 2px solid blue; */
+
+
+  }
+
+  #img2 {
+    opacity: 0.6;
+    height: 25px;
+  }
+
+/* .cardimagediv{
+    border: 1px solid red;
+} */
+
+
+.Border {
+    border-color: white;
+    font-family:Arial, Helvetica, sans-serif;
+   
+}
+
+.maincard {
+    width: 50%;
+    font-size:large;
+    color: rgb(140, 140, 140);
+    /* border: 1px solid black; */
+    
+ } 
+ /* .displaynote{
+  border: 1px solid red;
+ } */
+ .textArea {
+ border: none;
+ font-family:Arial, Helvetica, sans-serif;
+ font-weight: bold;
+
+}
+ .takenote {
+  margin-bottom: 10px;
+  color: rgb(173, 166, 166);
+
+}
+.barpin {
+ 
+  margin-top: 10px;
+}
+#pinbar{
+  /* border: 1px solid blue; */
+  height: 25px;
+  
+}
+#pin {
+  
+    opacity: 0.7;
+  
+}
+/* .takenoteicons{
+  border: 1px solid brown;
+ 
+} */
