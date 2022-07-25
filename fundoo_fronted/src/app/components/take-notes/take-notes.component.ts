@@ -10,8 +10,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./take-notes.component.css']
 })
 export class TakeNotesComponent implements OnInit {
-  flag = true;
-  flag1 = true;
+  open = true;
+  close = true;
   isPined = false;
 
   usernote: FormGroup ;
@@ -28,10 +28,10 @@ export class TakeNotesComponent implements OnInit {
   }
 
   display() {
-    this.flag = !this.flag;
+    this.open = !this.open;
   }
   pinned() {
-    this.flag1 = !this.flag1;
+    this.close = !this.close;
   }
   dopin(set: boolean) {
     this.isPined = set;

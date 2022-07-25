@@ -6,13 +6,14 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { AuthGuard } from './services/authguard/auth.guard';
 
 const routes: Routes = [
   {path:'register',component:RegistrationComponent},
   {path:'login',component:LoginComponent},
   {path:'forget',component:ForgetpasswordComponent},
   {path:'reset',component:ResetPasswordComponent},
-  {path:'dashboard',component:DashboardComponent,
+  {path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent,
   children:[
     {
       path:'note',

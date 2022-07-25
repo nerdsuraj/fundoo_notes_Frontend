@@ -1,1 +1,72 @@
-<p>display-notes works!</p>
+<div fxFlex="95" class="maincon" fxLayout="row"  >
+    <mat-card  fxFlex="100" fxFlex.xs="100"  class="matcard"  fxLayout="column">
+
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="cardimagediv" fxFlex="80">
+            <div class="lines">
+          {{item.Title}}
+          <br>
+          {{item.Descreption}}
+          <br>
+          {{item._id}}
+            </div>
+           
+
+            <div fxLayout="row">
+                <button mat-icon-button color="basic" (click)="pinned()" id="pin">
+                    <div class="barpin" *ngIf="close== true">
+                        <img id="pin1" src="../../../assets/img/pinbar.png" (click)='dopin(true)' />
+                    </div>
+    
+                    <div class="barpin" *ngIf="close== false">
+                        <img id="pinbar" class="unpin"  src="../../../assets/img/icons/unpin.png" (click)='dopin(false)' />
+                    </div>
+                </button>
+            </div>
+        </div>
+
+     
+
+        <!-- icons -->
+        <div fxLayout="row" fxLayoutAlign="start center" class="takenoteicons">
+            <div fxFlex="80" class="applist">
+                <app-iconslist [childdata]="item"></app-iconslist>
+            </div>
+            <!-- <div fxFlex="20" fxLayoutAlign="end center">
+                <button class="addnote" mat-button>
+                    
+                </button>
+            </div> -->
+        </div>
+    </mat-card>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div  fxLayout="row wrap">
+    <div cdkDropList  fxLayout="row wrap" fxLayoutAlign="start center" fxLayout.xs="column">
+        <div class="maindiv" cdkDrag >
+            <div class="matcardpic">
+
+            </div>
+        </div>
+</div>
+</div> -->
