@@ -1,0 +1,15 @@
+.trash{
+    color: #202124;
+    cursor: default;
+    display: flex;
+    font-size: 17px;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 8px;
+}
+.emt-trash{
+    background-color: rgb(251, 251, 251);
+    color: #1a73e8;
+}

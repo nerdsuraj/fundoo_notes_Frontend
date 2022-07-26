@@ -6,45 +6,45 @@ import { HttpService } from '../httpService/http.service';
   providedIn: 'root'
 })
 export class UserNotesService {
- token:any;
+  token: any;
 
   constructor(private httpService: HttpService) {
     this.token = localStorage.getItem("token");
-   }
+  }
 
-  getNote(reqData: any){
+  getNote(reqData: any) {
     console.log("data in note service", reqData)
 
     let httpOption = {
       headers: new HttpHeaders({
         'content-type': 'application/json',
-        'Authorization':" br " + this.token,
+        'Authorization': " br " + this.token,
       })
     }
     return this.httpService.Post('notes', reqData, true, httpOption)
   }
 
-  getallnote(){
+  getallnote() {
 
     let httpOption = {
       headers: new HttpHeaders({
         'content-type': 'application/json',
-        'Authorization':" br " + this.token,
+        'Authorization': " br " + this.token,
       })
     }
     return this.httpService.Get('notes', true, httpOption)
   }
 
 
-  trashNote(id:any) {
-   
+  trashNote(id: any) {
+
     let httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         'Authorization': " br " + this.token,
       })
     }
-    return this.httpService.put(":_id/isArchived", true, httpOptions)
+    return this.httpService.put("notes/" + id + "/isTrashed", null,true, httpOptions)
 
   }
 

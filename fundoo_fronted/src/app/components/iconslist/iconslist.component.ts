@@ -10,12 +10,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class IconslistComponent implements OnInit {
   @Input() card: any;
   @Output() color = new EventEmitter();
-  @Input() childdata:any;
+  @Input() childdata: any;
 
   /***************************************************************
    * List of colors that can be applied to card taken in an array
    **************************************************************/
-   colorArray = [
+  colorArray = [
     [
       { color: "#fff", name: "White" },
       { color: "#f28b82", name: "Red" },
@@ -39,27 +39,29 @@ export class IconslistComponent implements OnInit {
   ];
 
 
-  constructor(private UserNotesService:UserNotesService,private snackbar:MatSnackBar) { }
+  constructor(private UserNotesService: UserNotesService, private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
 
 
-  trashNote(){
+  trashNote() {
     console.log(this.childdata._id)
-    let reqData={
-  noteid:[this.childdata._id],
-  isDeleted:true,
-}
-console.log(reqData);
-    this.UserNotesService.trashNote(reqData).subscribe((response:any)=>{
-      console.log("inside the iconslist trash",response.data)
- 
-      this.snackbar.open("note deleted!!",'',{
+    let reqData = {
+      _id: [this.childdata._id],
+      // isDeleted:true,
+
+    }
+
+    console.log(reqData);
+    this.UserNotesService.trashNote(this.childdata._id).subscribe((response: any) => {
+      console.log("inside the iconslist trash", response)
+
+      this.snackbar.open("note deleted!!", '', {
         duration: 2000,
       });
 
-    },error=>{
+    }, error => {
       console.log(error)
     })
   }

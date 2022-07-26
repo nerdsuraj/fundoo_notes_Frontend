@@ -30,6 +30,8 @@ import { TakeNotesComponent } from './components/take-notes/take-notes.component
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import { IconslistComponent } from './components/iconslist/iconslist.component';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
     TakeNotesComponent,
     DisplayNotesComponent,
     IconslistComponent,
-    GetallnotesComponent
+    GetallnotesComponent,
+    TrashComponent,
+    UpdateNoteComponent
   ],
   imports: [
     BrowserModule,

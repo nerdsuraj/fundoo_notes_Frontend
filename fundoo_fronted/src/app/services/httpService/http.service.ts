@@ -24,8 +24,8 @@ export class HttpService {
     return this.httpClient.get(this.Endurl+url, token && httpOption)
   }
  
-  put(url: string, token: boolean ,httpOption:any={}) {
-    return this.httpClient.put(this.Endurl+url,token && httpOption);
+  put(url: string,body:null, token: boolean ,httpOption:any={}) {
+    return this.httpClient.put(this.Endurl+url,body,token && httpOption);
     }
    
 

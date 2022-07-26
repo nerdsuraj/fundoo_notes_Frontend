@@ -6,6 +6,7 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { TrashComponent } from './components/trash/trash.component';
 import { AuthGuard } from './services/authguard/auth.guard';
 
 const routes: Routes = [
@@ -19,7 +20,10 @@ const routes: Routes = [
       path:'note',
       component:GetallnotesComponent
     },
-    
+    {
+      path :'trash',
+      component : TrashComponent,
+    },
   ]
 },
 

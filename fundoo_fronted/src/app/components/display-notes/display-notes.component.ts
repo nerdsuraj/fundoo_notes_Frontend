@@ -24,7 +24,7 @@ export class DisplayNotesComponent implements OnInit {
   
   constructor( private HttpService:HttpService,private UserNotesService:UserNotesService) {  }
 
-  @Input() item : {Title:any,Descreption:any,_id:any}={Title:"",Descreption:"",_id:""}
+  @Input() item : {Title:any,Descreption:any,_id:any,isDeleted:any}={Title:"",Descreption:"",_id:"",isDeleted:""}
   
   ngOnInit(): void {
   }
