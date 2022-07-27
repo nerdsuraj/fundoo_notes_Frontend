@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {FormGroup, Validators,FormBuilder} from '@angular/forms';
 import { UserNotesService } from 'src/app/services/usernotes/user-notes.service';
-import { HttpService } from 'src/app/services/httpService/http.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { UpdateNoteComponent } from '../update-note/update-note.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 export interface DialogData { array: [] }
 
 @Component({
@@ -17,12 +18,12 @@ export class DisplayNotesComponent implements OnInit {
   array: any[];
 
   getNotes:any;
-
   submitted = false;
 
+
   
   
-  constructor( private HttpService:HttpService,private UserNotesService:UserNotesService) {  }
+  constructor( private dialog:MatDialog,private snackbar:MatSnackBar) {  }
 
   @Input() item : {Title:any,Descreption:any,_id:any,isDeleted:any}={Title:"",Descreption:"",_id:"",isDeleted:""}
   
@@ -35,4 +36,22 @@ export class DisplayNotesComponent implements OnInit {
   dopin(set: boolean) {
     this.isPined = set;
   }
+
+  // for update note
+
+  openDialog(item:any): void {
+    const dialogRef = this.dialog.open(UpdateNoteComponent, {
+      width: "50%",
+     
+    data:item,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed',result);
+      this.snackbar.open("updated note sucessfully done!!",'',{
+        duration: 2000,
+      })
+    });
+  }
 }
+

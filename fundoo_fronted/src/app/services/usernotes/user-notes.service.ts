@@ -48,6 +48,19 @@ export class UserNotesService {
 
   }
 
+ 
+  updateService(reqData:any) {
+
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': " br " + this.token,
+      })
+    }
+    return this.httpService.put("notes/" + reqData._id , reqData,true, httpOptions)
+
+  }
+
 
 
 

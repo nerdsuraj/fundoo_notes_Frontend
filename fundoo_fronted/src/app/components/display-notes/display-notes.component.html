@@ -1,31 +1,38 @@
-<div fxFlex="95" class="maincon" fxLayout="row"  >
-    <mat-card  fxFlex="100" fxFlex.xs="100"  class="matcard"  fxLayout="column">
+<div fxFlex="95" class="maincon" fxLayout="row">
+    <mat-card fxFlex="100" fxFlex.xs="100" class="matcard" fxLayout="column" (click)="openDialog(item)">
 
         <div fxLayout="row" fxLayoutAlign="space-between center" class="cardimagediv" fxFlex="80">
             <div class="lines">
-          {{item.Title}}
-          <br>
-          {{item.Descreption}}
-          <br>
-          {{item._id}}
-          {{item.isDeleted}}
+                <div (click)="openDialog(item)">
+                    <p>{{item.Title}}</p>
+                </div>
+                <br>
+                <div (click)="openDialog(item)">
+                    <p>
+                        {{item.Descreption}}
+                    </p>
+                </div>
+
+                <br>
+                {{item._id}}
+                {{item.isDeleted}}
             </div>
-           
 
             <div fxLayout="row">
                 <button mat-icon-button color="basic" (click)="pinned()" id="pin">
                     <div class="barpin" *ngIf="close== true">
                         <img id="pin1" src="../../../assets/img/pinbar.png" (click)='dopin(true)' />
                     </div>
-    
+
                     <div class="barpin" *ngIf="close== false">
-                        <img id="pinbar" class="unpin"  src="../../../assets/img/icons/unpin.png" (click)='dopin(false)' />
+                        <img id="pinbar" class="unpin" src="../../../assets/img/icons/unpin.png"
+                            (click)='dopin(false)' />
                     </div>
                 </button>
             </div>
         </div>
 
-     
+
 
         <!-- icons -->
         <div fxLayout="row" fxLayoutAlign="start center" class="takenoteicons">

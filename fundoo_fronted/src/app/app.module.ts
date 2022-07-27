@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,7 +59,7 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     MatButtonModule,
     MatCheckboxModule,
     ReactiveFormsModule,FormsModule,FlexLayoutModule,HttpClientModule,MatToolbarModule,
-    MatSnackBarModule,MatSidenavModule,MatListModule,MatIconModule,MatMenuModule
+    MatSnackBarModule,MatSidenavModule,MatListModule,MatIconModule,MatMenuModule,MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

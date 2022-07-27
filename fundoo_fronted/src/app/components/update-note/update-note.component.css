@@ -1,0 +1,64 @@
+.maincon {
+border: solid red;
+}
+
+.check {
+    font-size: small;
+    /* border: 2px solid lightcoral; */
+}
+
+.matcard {
+    /* border: 2px solid black; */
+    box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+::ng-deep .mat-dialog-container {
+    padding: 2%;
+    margin-left: 20%;
+  }
+
+#pin1 {
+    height: 20px;
+    /* margin-top: -20px; */
+    /* border: 1px solid orangered; */
+    /* margin-left: 120px; */
+    /* right: 0;
+ top: 0;
+ position: absolute; */
+
+}
+
+#pinbar {
+    /* margin-top: -20px; */
+    height: 20px;
+    /* right: 0;
+ top: 0;
+ position: absolute; */
+}
+
+/* .cardimagediv{
+    border: 1px solid green;
+} */
+
+/* .lines{
+    border: 1px solid red;
+} */
+
+.takenoteicons {
+    /* border: 2px solid orange; */
+    margin-top: 30px;
+}
+
+/* .applist{
+    border: 2px solid red;
+}
+.addnote{
+    border: 2px solid blue;
+} */
+input{
+    box-shadow: none;
+    border: none;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
