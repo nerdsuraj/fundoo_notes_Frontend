@@ -127,14 +127,14 @@
 
   <mat-sidenav-container class="example-sidenav-container"  [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
 
-    <mat-sidenav  #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+    <mat-sidenav  #snav [mode]="mobileQuery.matches ? 'over' : 'side'" 
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="sidenav">
 
-      <mat-nav-list>
+      <mat-nav-list class="sidebar" >
 
         <mat-list role="List" class="list" >
 
-          <div  >
+          <div class="forhover" routerLink="/dashboard/note">
             <mat-list-item role="listitem" id="note"  class="matlistitem" >
               <img id="img2" src="../../../assets/img/note.png" />
               Notes
@@ -142,26 +142,26 @@
           </div>
 
           
-          <div>
+          <div class="forhover">
             <mat-list-item role="listitem"  id="rem" class="matlistitem">
               <img id="img2" src="../../../assets/img/remainder.png" />
               Reminder</mat-list-item>
           </div>
 
 
-          <div>
+          <div class="forhover">
             <mat-list-item role="listitem"  id="edit" class="matlistitem">
               <img id="img2" src="../../../assets/img/edit.png" />
               Edit</mat-list-item>
           </div>
 
-          <div>
+          <div class="forhover" routerLink="/dashboard/archivednotes">
             <mat-list-item role="listitem"  id="archive" class="matlistitem">
-              <img id="img2" src="../../../assets/img/archive.png" />
+              <img  id="img2" src="../../../assets/img/archive.png" />
               Archive</mat-list-item>
           </div>
 
-          <div>
+          <div class="forhover" routerLink="/dashboard/trash">
             <mat-list-item role="listitem"  id="trash" class="matlistitem">
               <img id="img2" src="../../../assets/img/trash.png" />
               Trash</mat-list-item>

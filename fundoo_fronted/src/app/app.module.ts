@@ -33,6 +33,7 @@ import { IconslistComponent } from './components/iconslist/iconslist.component';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { UpdateNoteComponent } from './components/update-note/update-note.component';
+import { ArchivenotesComponent } from './components/archivenotes/archivenotes.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     IconslistComponent,
     GetallnotesComponent,
     TrashComponent,
-    UpdateNoteComponent
+    UpdateNoteComponent,
+    ArchivenotesComponent
   ],
   imports: [
     BrowserModule,

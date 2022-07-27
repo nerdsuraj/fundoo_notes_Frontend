@@ -34,7 +34,7 @@
     <mat-card fxLayout="column" class="matcard" fxFlex="45" fxFlex.xs="100" [formGroup]="usernote" >
         <div fxFlex="55" fxFlex.xs="97" fxLayout="row" fxLayoutAlign="space-between center">
             <div class="Border" fxLayout="column" class="takenote">
-                <textarea class="textArea" placeholder="Title" formControlName="noteTitle" ></textarea>
+                <textarea class="textArea" placeholder="Title" formControlName="noteTitle" cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
             </div>
             <div fxLayout="row">
                 <button mat-icon-button color="basic" (click)="pinned()" id="pin">

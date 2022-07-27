@@ -28,7 +28,9 @@ export class HttpService {
     return this.httpClient.put(this.Endurl+url,body,token && httpOption);
     }
    
-
+    patchService(url: string, reqData: any, token: boolean, httpOptions: any={}) {
+      return this.httpClient.patch(this.Endurl + url, reqData, token && httpOptions);
+    }
 
   }
  

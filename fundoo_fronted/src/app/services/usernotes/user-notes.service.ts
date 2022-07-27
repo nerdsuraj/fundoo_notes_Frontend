@@ -36,6 +36,18 @@ export class UserNotesService {
   }
 
 
+   archiveNote(id: any) {
+   
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': " br " + this.token,
+      })
+    }
+    return this.httpService.patchService("notes/" + id + "/isArchived", {}, true, httpOptions);
+  } 
+
+
   trashNote(id: any) {
 
     let httpOptions = {

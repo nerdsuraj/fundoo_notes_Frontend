@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArchivenotesComponent } from './components/archivenotes/archivenotes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassword.component';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
@@ -25,6 +26,9 @@ const routes: Routes = [
       path :'trash',
       component : TrashComponent,
     },
+    { path: 'archivednotes', 
+      component: ArchivenotesComponent
+   },
     // {
     //   path :'update',
     //   component : UpdateNoteComponent,

@@ -87,15 +87,20 @@ margin-right: 20%;
 opacity: 0.6;
 }
 
-/* .list{
-  border: 1px solid red;
+.forhover:hover{
+  background-color: rgb(254, 239, 195);
+  border-radius: 0px 25px 25px 0px;
+  
  
-} */
+}
+
 .matlistitem{
   
   margin-left: 10px;
   font-family: "Google Sans",Roboto,Arial,sans-serif;
 }
 mat-sidenav {
-  width: 200px;
+  width: 250px;
 }
+
+
