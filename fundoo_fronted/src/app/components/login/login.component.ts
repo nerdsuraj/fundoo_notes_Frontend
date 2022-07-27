@@ -29,8 +29,9 @@ export class LoginComponent implements OnInit {
         email:this.loginForm.value.email,
         password:this.loginForm.value.password
       }
-      return this.UserService.login(reqData).subscribe((Response:any)=>{
-        console.log(Response)
+      return this.UserService.login(reqData).subscribe((response:any)=>{
+        console.log(response)
+        localStorage.setItem("token",response.data)
       },(error)=>{
         console.log(error)
       })

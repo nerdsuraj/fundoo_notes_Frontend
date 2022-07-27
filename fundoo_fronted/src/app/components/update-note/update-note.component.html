@@ -1,22 +1,16 @@
-<div fxFlex="95" class="maincon" fxLayout="row">
-    <mat-card fxFlex="100" fxFlex.xs="100" class="matcard" fxLayout="column" (click)="openDialog(item)">
+<div fxFlex="100" class="maincon" fxLayout="row" fxLayoutAlign="space-between center" fxFlex.xs="100">
+    <mat-card fxFlex="100" fxFlex.xs="100" class="matcard" fxLayout="column">
 
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="cardimagediv" fxFlex="80">
-            <div class="lines">
-                <div (click)="openDialog(item)">
-                    <p>{{item.Title}}</p>
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="cardimagediv" fxFlex="90"  fxFlex.xs="100">
+            <div fxLayout="column" fxLayoutGap="20px">
+                <div class="lines">
+                    <input type="text" placeholder="title" [(ngModel)]="title">
                 </div>
-                <br>
-                <div (click)="openDialog(item)">
-                    <p>
-                        {{item.Descreption}}
-                    </p>
+                <div>
+                    <input type="text" placeholder="content" [(ngModel)]="description">
                 </div>
-
-                <br>
-                {{item._id}}
-                {{item.isDeleted}}
             </div>
+
 
             <div fxLayout="row">
                 <button mat-icon-button color="basic" (click)="pinned()" id="pin">
@@ -36,14 +30,14 @@
 
         <!-- icons -->
         <div fxLayout="row" fxLayoutAlign="start center" class="takenoteicons">
-            <div fxFlex="80" class="applist">
-                <app-iconslist [childdata]="item"></app-iconslist>
+            <div fxFlex="100" class="applist">
+                <app-iconslist [card]="data"></app-iconslist>
             </div>
-            <!-- <div fxFlex="20" fxLayoutAlign="end center">
-                <button class="addnote" mat-button>
-                    
+            <div fxFlex="20" fxLayoutAlign="end center" (click)="close">
+                <button class="addnote" mat-button (click)="closeDialog()">
+                    close
                 </button>
-            </div> -->
+            </div>
         </div>
     </mat-card>
 </div>

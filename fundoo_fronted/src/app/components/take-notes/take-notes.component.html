@@ -1,4 +1,4 @@
-<div *ngIf="flag == true" fxLayout="row" fxLayoutAlign="space-around start" fxFlex="100" class="maincon">
+<div *ngIf="open == true" fxLayout="row" fxLayoutAlign="space-around start" fxFlex="100" class="maincon">
     <mat-card (click)="display()" fxFlex="45" fxFlex.xs="100" class="matcard" fxLayoutAlign="space-between center"
         style="padding-bottom:0px;padding-top:0px">
         <div data-text="Take a note..." class="Border" id="noteTitle" fxLayout="column" class="maincard">
@@ -30,7 +30,7 @@
 
 
 <!-- TO DISPLAY TITLE AND TAKE A NOTE -->
-<div *ngIf="flag == false" class="displaynote" fxLayout="row" fxLayoutAlign="space-around start" fxFlex="100">
+<div *ngIf="open == false" class="displaynote" fxLayout="row" fxLayoutAlign="space-around start" fxFlex="100">
     <mat-card fxLayout="column" class="matcard" fxFlex="45" fxFlex.xs="100" [formGroup]="usernote" >
         <div fxFlex="55" fxFlex.xs="97" fxLayout="row" fxLayoutAlign="space-between center">
             <div class="Border" fxLayout="column" class="takenote">
@@ -38,12 +38,12 @@
             </div>
             <div fxLayout="row">
                 <button mat-icon-button color="basic" (click)="pinned()" id="pin">
-                    <div class="barpin" *ngIf="flag1== true">
+                    <div class="barpin" *ngIf="close== true">
                         <img id="pinbar" src="../../../assets/img/pinbar.png" (click)='dopin(true)' />
                     </div>
 
-                    <div class="barpin" *ngIf="flag1== false">
-                        <img src="../../../assets/image/unpinbar.svg" (click)='dopin(false)' />
+                    <div class="barpin" *ngIf="close== false">
+                        <img id="pinbar"  src="../../../assets/img/icons/unpin.png" (click)='dopin(false)' />
                     </div>
                 </button>
             </div>
@@ -62,7 +62,7 @@
                 <app-iconslist></app-iconslist>
             </div>
             <div fxFlex="20" fxLayoutAlign="end center">
-                <button class="addnote" mat-button (click)=" addNote()">
+                <button class="addnote" mat-button (click)=" addNote()" (click)="display()" >
                     Close
                 </button>
             </div>

@@ -13,14 +13,28 @@
       </button>
 
        <!-- color button -->
-  <button id="col" mat-icon-button matTooltip="Change color">
+  <button id="col" mat-icon-button matTooltip="Change color"  [matMenuTriggerFor]="colorlist">
     <img id="img" class="imgicons" src="../../../assets/img/icons/color.png" />
   </button>
+
+  <mat-menu #colorlist="matMenu" >
+    <ng-template matMenuContent>
+      <div class="buttons">
+        <div fxLayout="row" fxLayoutGap="10px" style="margin-top: 3px" *ngFor="let colors of colorArray">
+          <div *ngFor="let color of colors">
+            <button class="colors" [ngStyle]="{ 'background-color': color.color }"
+                mat-mini-fab></button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </mat-menu>
 
     <!-- add image button -->
   <button mat-icon-button  matTooltip="Add image">
     <img id="img" class="imgicons" src="../../../assets/img/icons/image.png" />
   </button>
+  
 
   <!-- archive button -->
   
@@ -29,8 +43,28 @@
     </button>
 
    <!-- more menu button -->
-   <button id="menu" mat-icon-button  colour="basic" matTooltip="more">
+   <button id="menu" mat-icon-button [matMenuTriggerFor]="menu" colour="basic" matTooltip="more">
     <img id="img" class="imgicons" src="../../../assets/img/icons/more.png" />
   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="trashNote()">
+      Delete
+    </button>
+    <button mat-menu-item >
+      <span>Add Lebel</span>
+    </button>
+    <button mat-menu-item>
+      <span>Add Drawing</span>
+    </button>
+    <button mat-menu-item>
+      <span>Make a copy</span>
+    </button>
+    <button mat-menu-item>
+      <span>Show checkboxes</span>
+    </button>
+    <button mat-menu-item>
+      <span>Copy to Google Docs</span>
+    </button>
+  </mat-menu>
 
 </div>

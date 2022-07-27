@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,8 @@ import { TakeNotesComponent } from './components/take-notes/take-notes.component
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import { IconslistComponent } from './components/iconslist/iconslist.component';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
     TakeNotesComponent,
     DisplayNotesComponent,
     IconslistComponent,
-    GetallnotesComponent
+    GetallnotesComponent,
+    TrashComponent,
+    UpdateNoteComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,7 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
     MatButtonModule,
     MatCheckboxModule,
     ReactiveFormsModule,FormsModule,FlexLayoutModule,HttpClientModule,MatToolbarModule,
-    MatSnackBarModule,MatSidenavModule,MatListModule,MatIconModule,MatMenuModule
+    MatSnackBarModule,MatSidenavModule,MatListModule,MatIconModule,MatMenuModule,MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

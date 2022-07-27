@@ -1,2 +1,8 @@
 <app-take-notes></app-take-notes>
-<app-display-notes></app-display-notes>
+<div class="displaynote">
+<ul *ngFor="let content of noteArray" >
+    <app-display-notes [item]="content" ></app-display-notes>
+</ul>
+</div>
+<!-- wrap -->
+
