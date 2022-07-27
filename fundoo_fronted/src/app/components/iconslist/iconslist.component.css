@@ -8,3 +8,13 @@
    height: 17px;
    
 }
+button:hover {
+    background-color: rgba(0, 0, 0, .1);
+    opacity: 1;
+}
+::ng-deep .mat-button,
+.mat-icon-button,
+.mat-stroked-button {
+    
+    background: transparent;
+}

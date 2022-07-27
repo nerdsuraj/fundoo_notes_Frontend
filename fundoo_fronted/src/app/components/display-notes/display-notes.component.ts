@@ -15,7 +15,7 @@ export class DisplayNotesComponent implements OnInit {
   close = true;
   isPined = false;
 
-  array: any[];
+  array: any;
 
   getNotes:any;
   submitted = false;

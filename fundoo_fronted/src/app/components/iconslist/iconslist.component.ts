@@ -11,7 +11,10 @@ export class IconslistComponent implements OnInit {
   @Input() card: any;
   @Output() color = new EventEmitter();
   @Input() childdata: any;
+  @Output() changeNoteStatus = new EventEmitter<any>();
 
+  isArchive: any;
+  isTrash: any;
   /***************************************************************
    * List of colors that can be applied to card taken in an array
    **************************************************************/
@@ -43,6 +46,10 @@ export class IconslistComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  ngOnChanges() {
+    this.isArchive = this.childdata.isArchived;
+    
+  }
 
 
   trashNote() {
@@ -66,6 +73,31 @@ export class IconslistComponent implements OnInit {
     })
   }
 
+
+  changeArchiveStatus() {
+    console.log(this.childdata._id)
+    let reqData = {
+      _id: [this.childdata._id],
+       isArchived:true,
+    }
+
+    console.log(reqData);
+    this.UserNotesService.archiveNote(this.childdata._id).subscribe((response: any) => {
+      console.log("inside the iconslist archive", response)
+      this.changeNoteStatus.emit(response);
+      if (response.data.isArchived === true)
+      {
+        this.snackbar.open("note archive!!", '', {
+          duration: 2000,
+        });
+      }
+     
+
+    }, error => {
+      console.log(error)
+    })
+    
+  }
 
 
 
