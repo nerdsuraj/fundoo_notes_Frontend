@@ -13,3 +13,16 @@
     background-color: rgb(251, 251, 251);
     color: #1a73e8;
 }
+
+
+
+.notesContainer_Main {
+    /* border: solid red; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.displayNotes {
+    margin-left: 150px;
+    margin-top: 50px;
+}

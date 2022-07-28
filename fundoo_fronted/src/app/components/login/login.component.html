@@ -1,8 +1,8 @@
-<mat-card  class="card">
+<mat-card  class="card" fxFlex="33"  fxFlex.xs="100">
     
   <div class="container">
     <form [formGroup]="loginForm" (ngSubmit)="login()">
-        <mat-card-title class="fundoo" >
+        <mat-card-title class="fundoo"  fxLayout="row" fxLayoutAlign="center center">
           <span class="f">F</span>
           <span class="u">u</span>
           <span class="n">n</span>
@@ -15,13 +15,13 @@
        <!-- title & subtitle -->
 
     <br>
-        <mat-card-title calss="sign"  >Log In</mat-card-title>
+        <mat-card-title calss="sign"  fxLayout="row" fxLayoutAlign="center center">Log In</mat-card-title>
         <br>
-        <mat-card-subtitle  >Use your Fundoo Account</mat-card-subtitle>
+        <mat-card-subtitle  fxLayout="row" fxLayoutAlign="center center">Use your Fundoo Account</mat-card-subtitle>
       
 
        <!-- user mail id  -->
-      <div class="mains-name">
+      <div class="mains-name" >
       <p>
         <mat-form-field appearance="outline" class="email">
           <mat-label >Email or phone</mat-label>

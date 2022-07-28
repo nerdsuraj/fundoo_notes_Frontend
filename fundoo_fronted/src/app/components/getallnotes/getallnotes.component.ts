@@ -7,14 +7,13 @@ import { UserNotesService } from 'src/app/services/usernotes/user-notes.service'
   styleUrls: ['./getallnotes.component.css']
 })
 export class GetallnotesComponent implements OnInit {
-  noteArray=[];
+  noteArray:any;
 
   constructor(private UserNotesService:UserNotesService) { }
 
   ngOnInit(): void {
     this.getallnote();
   }
-
 
  
   getallnote()
@@ -23,6 +22,9 @@ export class GetallnotesComponent implements OnInit {
       console.log("request data",request);
       this.noteArray = request.data;
       this.noteArray.reverse();
+      this.noteArray = this.noteArray.filter((notedata: any) => {
+        return notedata.isDeleted === false && notedata.isArchived == false;
+      })
       console.log("data from notesarray variable",this.noteArray);
     })
   }

@@ -20,12 +20,12 @@ export class DisplayNotesComponent implements OnInit {
   getNotes:any;
   submitted = false;
 
-
-  
+  // {Title:any,Descreption:any,_id:any,isDeleted:any}={Title:"",Descreption:"",_id:"",isDeleted:""}
+  @Input() item : any;
   
   constructor( private dialog:MatDialog,private snackbar:MatSnackBar) {  }
 
-  @Input() item : {Title:any,Descreption:any,_id:any,isDeleted:any}={Title:"",Descreption:"",_id:"",isDeleted:""}
+  
   
   ngOnInit(): void {
   }

@@ -4,3 +4,9 @@
     <button fxFlexOffset="5" class="emt-trash" fxLayoutAlign='center center' mat-button >Empty
       Trash</button>
   </div>
+
+  <div class="notesContainer_Main"  fxLayout="row" fxFlex.xs="100">
+    <div class="displayNotes" fxFlex="26" *ngFor="let content of noteArray" fxFlex.xs="100">
+      <app-display-notes [item]="content"></app-display-notes>
+    </div>
+</div>
