@@ -15,9 +15,12 @@ const routes: Routes = [
   {path:'register',component:RegistrationComponent},
   {path:'login',component:LoginComponent},
   {path:'forget',component:ForgetpasswordComponent},
-  {path:'reset',component:ResetPasswordComponent},
+  {path:'reset/:token',component:ResetPasswordComponent},
   {path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent,
   children:[
+    {
+      path:'',redirectTo:"/dashboard/note",pathMatch:'full'
+    },
     {
       path:'note',
       component:GetallnotesComponent

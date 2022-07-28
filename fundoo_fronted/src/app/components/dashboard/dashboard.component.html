@@ -35,7 +35,7 @@
 
       <!-- refresh butto -->
 
-      <button mat-icon-button color="basic" id="refresh" matTooltip="Refresh">
+      <button mat-icon-button color="basic" id="refresh" matTooltip="Refresh" (click)="refresh()">
         <mat-icon id="refresh">refresh</mat-icon>
       </button>
 
@@ -113,7 +113,7 @@
     </div>
     <input fxHide class="image" type="file" >
 
-    <button class="signout" mat-flat-button >
+    <button class="signout" mat-flat-button (click)="signout()" (click)="openSnackBar()">
       Logout
     </button>
 

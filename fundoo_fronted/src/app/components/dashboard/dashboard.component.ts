@@ -1,5 +1,7 @@
 import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +15,7 @@ export class DashboardComponent implements OnInit {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher)
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router:Router,private snackBar:MatSnackBar)
    {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -27,6 +29,19 @@ export class DashboardComponent implements OnInit {
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   
 
+  signout() {
+    localStorage.removeItem("token");
+    this.router.navigateByUrl('/login');
+    window.location.reload();
+  }
+  
+  openSnackBar() {
+    this.snackBar.open('Signed out successfully', 'Ok', { duration: 2000 })
+  }
 
+  refresh(): void {
+    window.location.reload();
+  }
 
 }
+// logout method localstorage.removeitem("token")
