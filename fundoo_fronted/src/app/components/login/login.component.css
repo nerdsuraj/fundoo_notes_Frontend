@@ -91,7 +91,7 @@
   .pass-link {
         
    color: blue;   
-      margin-right: 40px;
+      
   
     }
    
@@ -110,7 +110,7 @@
   }
   #login{
     background-image: linear-gradient(to right, #000046 0%, #1CB5E0  51%, #000046  100%); 
-    text-align: center;
+    
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;

@@ -26,7 +26,7 @@
         </button>
 
         <input fxFlex="50" matInput placeholder="Search" [style.fontSize.px]="16" class="search-window"
-          autocomplete="off" type="text"/>
+          autocomplete="off" type="text" (keyup)="recieveSearchNote($event)" [(ngModel)]="searchTerm"/>
       </mat-form-field>
     </div>
 
@@ -35,7 +35,7 @@
 
       <!-- refresh butto -->
 
-      <button mat-icon-button color="basic" id="refresh" matTooltip="Refresh">
+      <button mat-icon-button color="basic" id="refresh" matTooltip="Refresh" (click)="refresh()">
         <mat-icon id="refresh">refresh</mat-icon>
       </button>
 
@@ -113,7 +113,7 @@
     </div>
     <input fxHide class="image" type="file" >
 
-    <button class="signout" mat-flat-button >
+    <button class="signout" mat-flat-button (click)="signout()" (click)="openSnackBar()">
       Logout
     </button>
 

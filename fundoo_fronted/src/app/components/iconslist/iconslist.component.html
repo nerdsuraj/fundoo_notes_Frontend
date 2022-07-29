@@ -1,19 +1,19 @@
 <div   class="iconsdiv" fxLayoutAlign="space-between end" fxLayout="row" fxFlex="70">
-    <button id="Remaind" matTooltip="Remind me" mat-icon-button >
+    <button id="Remaind" matTooltip="Remind me" mat-icon-button *ngIf="!isTrash" >
         <mat-icon>
             <img id="img" class="imgicons" src="../../../assets/img/icons/reminder.png" />
         </mat-icon>
     </button>
 
       <!-- Collaborator icon -->
-      <button id="coll" mat-icon-button matTooltip="Collaborator" >
+      <button id="coll" mat-icon-button matTooltip="Collaborator" *ngIf="!isTrash">
         <mat-icon>
             <img id="img" class="imgicons" src="../../../assets/img/icons/collab.png" />
         </mat-icon>
       </button>
 
        <!-- color button -->
-  <button id="col" mat-icon-button matTooltip="Change color"  [matMenuTriggerFor]="colorlist">
+  <button id="col" mat-icon-button matTooltip="Change color"  [matMenuTriggerFor]="colorlist" *ngIf="!isTrash">
     <img id="img" class="imgicons" src="../../../assets/img/icons/color.png" />
   </button>
 
@@ -31,21 +31,33 @@
   </mat-menu>
 
     <!-- add image button -->
-  <button mat-icon-button  matTooltip="Add image">
+  <button mat-icon-button  matTooltip="Add image" *ngIf="!isTrash">
     <img id="img" class="imgicons" src="../../../assets/img/icons/image.png" />
   </button>
   
 
   <!-- archive button -->
   
-    <button id="arc" (click)="changeArchiveStatus()" mat-icon-button matTooltip="Archive" >
+    <button id="arc" (click)="changeArchiveStatus()" *ngIf="!isArchive && !isTrash" mat-icon-button matTooltip="Archive" >
       <img id="img" class="imgicons" src="../../../assets/img/icons/archive.png" />
     </button>
+    <button mat-icon-button *ngIf="isArchive && !isTrash" matTooltip="Unarchive" (click)="changeArchiveStatus()"> 
+      <img id="unarchive" src="../../../assets/img/icons/unarchive.png" width="20px" height="20px">
+  </button>
+  <button mat-icon-button matTooltip="Delete Forever"  *ngIf="isTrash"> 
+    <img src="../../../assets/img/icons/deletedforver.png" width="20px" height="20px">
+</button>
+<button mat-icon-button matTooltip="Restore" (click)="trashNote()" *ngIf="isTrash"> 
+    <img src="../../../assets/img/icons/restore.png" width="20px" height="20px">
+</button>
 
    <!-- more menu button -->
-   <button id="menu" mat-icon-button [matMenuTriggerFor]="menu" colour="basic" matTooltip="more">
+   <button id="menu" mat-icon-button [matMenuTriggerFor]="menu" colour="basic" matTooltip="more" *ngIf="!isTrash">
     <img id="img" class="imgicons" src="../../../assets/img/icons/more.png" />
   </button>
+
+ 
+
   <mat-menu #menu="matMenu">
     <button mat-menu-item (click)="trashNote()">
       Delete
@@ -53,18 +65,10 @@
     <button mat-menu-item >
       <span>Add Lebel</span>
     </button>
-    <button mat-menu-item>
-      <span>Add Drawing</span>
-    </button>
-    <button mat-menu-item>
-      <span>Make a copy</span>
-    </button>
-    <button mat-menu-item>
-      <span>Show checkboxes</span>
-    </button>
-    <button mat-menu-item>
-      <span>Copy to Google Docs</span>
-    </button>
+   
+   
+    
+    
   </mat-menu>
 
 </div>

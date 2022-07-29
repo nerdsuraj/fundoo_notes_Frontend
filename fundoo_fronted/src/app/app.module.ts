@@ -34,6 +34,7 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
 import { TrashComponent } from './components/trash/trash.component';
 import { UpdateNoteComponent } from './components/update-note/update-note.component';
 import { ArchivenotesComponent } from './components/archivenotes/archivenotes.component';
+import { FilterPipe } from './pipe/search/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ArchivenotesComponent } from './components/archivenotes/archivenotes.co
     GetallnotesComponent,
     TrashComponent,
     UpdateNoteComponent,
-    ArchivenotesComponent
+    ArchivenotesComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

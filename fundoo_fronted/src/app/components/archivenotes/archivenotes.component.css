@@ -1,11 +1,11 @@
 .trash{
     color: #202124;
     cursor: default;
-    display: flex;
+    
     font-size: 17px;
     font-style: italic;
     align-items: center;
-    justify-content: center;
+  
     padding-top: 24px;
     padding-bottom: 8px;
 }
@@ -16,12 +16,16 @@
 /* .notesContainer_Main{
     border: solid red;
 } */
-.notesContainer_Main {
-    align-items: center;
-}
-
-.displayNotes {
+/* .notesContainer_Main {
+    border: solid red;
+    display: flex;
     flex-wrap: wrap;
+} */
+
+.display {
     margin-left: 150px;
     margin-top: 50px;
+    /* border: solid red; */
+    /* display: flex;
+    flex-wrap: wrap; */
 }

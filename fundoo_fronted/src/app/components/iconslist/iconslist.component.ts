@@ -48,6 +48,7 @@ export class IconslistComponent implements OnInit {
   }
   ngOnChanges() {
     this.isArchive = this.childdata.isArchived;
+    this.isTrash = this.childdata.isDeleted;
     
   }
 
@@ -56,17 +57,24 @@ export class IconslistComponent implements OnInit {
     console.log(this.childdata._id)
     let reqData = {
       _id: [this.childdata._id],
-      // isDeleted:true,
-
     }
 
     console.log(reqData);
     this.UserNotesService.trashNote(this.childdata._id).subscribe((response: any) => {
       console.log("inside the iconslist trash", response)
+      if(response.data.isDeleted === true){
+        this.snackbar.open("note deleted!!", '', {
+          duration: 2000,
+        });
+      }
+      else {
+         this.snackbar.open('Note restored', 'Success', {
+          duration: 2000,
+         
+        })
+      }
 
-      this.snackbar.open("note deleted!!", '', {
-        duration: 2000,
-      });
+     
 
     }, error => {
       console.log(error)
@@ -90,6 +98,11 @@ export class IconslistComponent implements OnInit {
         this.snackbar.open("note archive!!", '', {
           duration: 2000,
         });
+      }
+      else {
+        this.snackbar.open('Note Unarchived', 'Success', {
+          duration: 2000,
+        })
       }
      
 

@@ -1,8 +1,8 @@
 <app-take-notes></app-take-notes>
 <div class="displaynote">
-<ul *ngFor="let content of noteArray" >
-    <app-display-notes [item]="content" ></app-display-notes>
-</ul>
+<!-- <ul *ngFor="let content of noteArray | filter : searchString" > -->
+    <app-display-notes [items]="notesList" ></app-display-notes>
+<!-- </ul> -->
 </div>
 <!-- wrap -->
 
