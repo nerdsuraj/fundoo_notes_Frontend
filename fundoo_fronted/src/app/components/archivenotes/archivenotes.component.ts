@@ -11,7 +11,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ArchivenotesComponent implements OnInit {
 
-  noteArray:any;
+  noteArray:[];
+  notesList=[];
   isArchivedNotes = true;
 
   constructor(private UserNotesService:UserNotesService,private dialog:MatDialog,private snackbar:MatSnackBar) { }
@@ -24,7 +25,7 @@ export class ArchivenotesComponent implements OnInit {
     this.UserNotesService.getallnote().subscribe((response: any) => {
       this.noteArray = response.data;
       this.noteArray.reverse();
-      this.noteArray = this.noteArray.filter((userNote: any) => {
+      this.notesList = this.noteArray.filter((userNote: any) => {
         return userNote.isArchived === true && userNote.isDeleted === false;
       })
       console.log("Retrieved All Archived Notes Successfully", this.noteArray);

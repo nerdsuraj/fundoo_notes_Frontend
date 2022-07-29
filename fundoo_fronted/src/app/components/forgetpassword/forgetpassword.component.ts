@@ -19,7 +19,7 @@ export class ForgetpasswordComponent implements OnInit {
     this.forgetForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]]
     });
-    this.token = this.activeRoute.snapshot.paramMap.get('token');
+   
     console.log(this.token);
   }
 

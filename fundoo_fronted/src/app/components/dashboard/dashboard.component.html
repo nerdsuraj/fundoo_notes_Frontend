@@ -26,7 +26,7 @@
         </button>
 
         <input fxFlex="50" matInput placeholder="Search" [style.fontSize.px]="16" class="search-window"
-          autocomplete="off" type="text"/>
+          autocomplete="off" type="text" (keyup)="recieveSearchNote($event)" [(ngModel)]="searchTerm"/>
       </mat-form-field>
     </div>
 

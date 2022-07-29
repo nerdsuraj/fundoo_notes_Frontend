@@ -42,7 +42,18 @@ export class UserService {
     }
     return this.httpService.Post('users/forgotpassword', reqData, false, httpOption)
   }
-  resetPass() {
+
+  resetPass(newpss:any,token:any) {
+    let httpOptions = {
+      Headers: new HttpHeaders({
+        'content-type': 'application/json',
+      })
+    }
+    console.log("Data in User services : ", token);
+    return this.httpService.Post('users/resetpassword/'+token, newpss, false, httpOptions)
+  }
+
+
 
   }
-}
+

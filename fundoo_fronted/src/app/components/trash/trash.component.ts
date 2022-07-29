@@ -7,7 +7,8 @@ import { UserNotesService } from 'src/app/services/usernotes/user-notes.service'
   styleUrls: ['./trash.component.css']
 })
 export class TrashComponent implements OnInit {
-  noteArray:any;
+  noteArray:[];
+  notesList=[];
   
   constructor(private UserNotesService:UserNotesService) { }
 
@@ -18,7 +19,7 @@ export class TrashComponent implements OnInit {
     this.UserNotesService.getallnote().subscribe((response: any) => {
       this.noteArray = response.data;
       this.noteArray.reverse();
-      this.noteArray = this.noteArray.filter((userNote: any) => {
+      this.notesList = this.noteArray.filter((userNote: any) => {
         return  userNote.isDeleted === true;
       })
       console.log("Retrieved All trash Notes Successfully", this.noteArray);

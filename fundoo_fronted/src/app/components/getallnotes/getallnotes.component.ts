@@ -7,7 +7,10 @@ import { UserNotesService } from 'src/app/services/usernotes/user-notes.service'
   styleUrls: ['./getallnotes.component.css']
 })
 export class GetallnotesComponent implements OnInit {
-  noteArray:any;
+  noteArray:[];
+  searchString: any;
+  notesList=[];
+  // of:any;
 
   constructor(private UserNotesService:UserNotesService) { }
 
@@ -18,13 +21,15 @@ export class GetallnotesComponent implements OnInit {
  
   getallnote()
   {
-    this.UserNotesService.getallnote().subscribe((request:any)=>{
-      console.log("request data",request);
-      this.noteArray = request.data;
+    this.UserNotesService.getallnote().subscribe((reponse:any)=>{
+      console.log("request data",reponse);
+      this.noteArray = reponse.data;
       this.noteArray.reverse();
-      this.noteArray = this.noteArray.filter((notedata: any) => {
-        return notedata.isDeleted === false && notedata.isArchived == false;
+      this.notesList = this.noteArray.filter((notedata: any) => {
+        return notedata.isDeleted == false && notedata.isArchived == false;
       })
+     console.log("notelist data",this.notesList);
+      
       console.log("data from notesarray variable",this.noteArray);
     })
   }

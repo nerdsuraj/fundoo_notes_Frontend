@@ -1,8 +1,18 @@
-/* .maincon{
-    border: 1px solid red;
+.conati{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.maincon{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    margin-top: 1%;
    
    
-} */
+}
 .check{
     font-size: small;
     /* border: 2px solid lightcoral; */

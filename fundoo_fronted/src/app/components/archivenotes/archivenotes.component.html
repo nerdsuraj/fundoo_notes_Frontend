@@ -1,9 +1,8 @@
-<div  class="trash" fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="column">
+<!-- <div  class="trash" fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="column">
     "Your archived notes appear here"
     <button fxFlexOffset="5" class="emt-trash" fxLayoutAlign='center center' mat-button>archive</button>
-  </div>
-<div class="notesContainer_Main"  fxLayout="row" fxFlex.xs="100">
-    <div class="displayNotes" fxFlex="20" *ngFor="let content of noteArray" fxFlex.xs="100">
-      <app-display-notes [item]="content"></app-display-notes>
+  </div> -->
+<!-- <div class="notesContainer_Main"  fxLayout="row" fxFlex.xs="100"> -->
+    <div class="display" fxFlex="100"   fxFlex.xs="100">
+      <app-display-notes [items]="notesList"></app-display-notes>
     </div>   
-</div>
