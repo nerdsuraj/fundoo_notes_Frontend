@@ -1,7 +1,7 @@
 <app-take-notes></app-take-notes>
 <div class="displaynote">
 <!-- <ul *ngFor="let content of noteArray | filter : searchString" > -->
-    <app-display-notes [items]="notesList" ></app-display-notes>
+    <app-display-notes [items]="notesList" (updateNoteEvent)="recievedUpdatedData($event)"></app-display-notes>
 <!-- </ul> -->
 </div>
 <!-- wrap -->

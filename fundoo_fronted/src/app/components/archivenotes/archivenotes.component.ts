@@ -47,4 +47,12 @@ export class ArchivenotesComponent implements OnInit {
       })
     });
   }
+
+
+  recievedUpdatedData(trashData: any) {
+    console.log(trashData)
+    setTimeout(() => {
+      this.getArchivedNotesList();
+    }, 50);
+  }
 }

@@ -33,4 +33,11 @@ export class GetallnotesComponent implements OnInit {
       console.log("data from notesarray variable",this.noteArray);
     })
   }
+
+
+  recievedUpdatedData(note: any) {
+    setTimeout(() => {
+      this.getallnote();
+    }, 50);
+  } 
 }

@@ -62,6 +62,7 @@ export class IconslistComponent implements OnInit {
     console.log(reqData);
     this.UserNotesService.trashNote(this.childdata._id).subscribe((response: any) => {
       console.log("inside the iconslist trash", response)
+      this.changeNoteStatus.emit(response);
       if(response.data.isDeleted === true){
         this.snackbar.open("note deleted!!", '', {
           duration: 2000,

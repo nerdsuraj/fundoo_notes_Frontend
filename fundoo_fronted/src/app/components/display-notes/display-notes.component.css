@@ -1,6 +1,8 @@
 .conati{
     display: flex;
     flex-wrap: wrap;
+    margin-left: 3%;
+  
 }
 
 
@@ -8,8 +10,8 @@
     /* border: 1px solid red; */
     display: flex;
     flex-wrap: wrap;
-    margin-left: 2%;
-    margin-top: 1%;
+    margin-top: 1%; 
+    height: fit-content;
    
    
 }
@@ -50,14 +52,14 @@
 
 .takenoteicons{
     /* border: 2px solid orange; */
-    margin-top: 30px;
+    margin-top: 5px;
 }
 /* .applist{
     border: 2px solid red;
-}
-.addnote{
-    border: 2px solid blue;
 } */
+/* .addnote{
+    border: 2px solid blue;
+}  */
 /* .barpin{
     border: solid red;
    
@@ -65,4 +67,9 @@
 .forpin{
     /* border: solid black; */
     margin-bottom: 30%;
+}
+.inputtext{
+    margin-top:2px;
+    
+    /* border: solid red; */
 }

@@ -1,34 +1,30 @@
 <!-- <div class="container" style="border:solid red" fxLayout="row wrap">
     <div fxLayout="row" fxLayoutAlign="start center" fxLayout.xs="column" style="border:solid blue"> -->
-        <div fxLayout="row" fxLayoutAlign="start start" class="conati">
-        <div class="maincon" fxLayout="row " fxFlex.xs="100" fxLayoutGap="23" *ngFor="let item of items | filter : searchString" >
-            <mat-card fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" class="matcard" fxLayout="column">
+        <div fxLayout="row" fxLayoutAlign="start start" class="conati" fxLayoutGap="20">
+        <div class="maincon" fxLayout="row" fxFlex="22" fxFlex.xs="100"  *ngFor="let item of items | filter : searchString" >
+            <mat-card fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" class="matcard"  fxLayout="column">
                 <div fxLayout="row" fxLayoutAlign="space-between center" class="cardimagediv" fxFlex="80">
                     <div class="lines">
 
-                        <div (click)="openDialog(item)">
+                        <div (click)="openDialog(item)" class="inputtext">
                             <p>{{item.Title}}</p>
                         </div>
 
-                        <div (click)="openDialog(item)">
+                        <div (click)="openDialog(item)" class="inputtext">
                             <p>{{item.Descreption}}</p>
                         </div>
-
-                        {{item._id}} {{item.isDeleted}}
-
-
                     </div>
 
                     <div fxLayout="row" class="forpin">
-                        <button mat-icon-button color="basic" (click)="pinned()" id="pin">
+                        <button mat-icon-button color="basic"  id="pin">
                             <div class="barpin" *ngIf="close== true">
                                 <img id="pin1" src="../../../assets/img/pinbar.png" (click)='dopin(true)' />
                             </div>
 
-                            <div class="barpin" *ngIf="close== false">
+                            <!-- <div class="barpin" *ngIf="close== false">
                                 <img id="pinbar" class="unpin" src="../../../assets/img/icons/unpin.png"
                                     (click)='dopin(false)' />
-                            </div>
+                            </div> -->
                         </button>
                     </div>
                 </div>
@@ -38,7 +34,7 @@
                 <!-- icons -->
                 <div fxLayout="row" fxLayoutAlign="start center" class="takenoteicons">
                     <div fxFlex="80" class="applist">
-                        <app-iconslist [childdata]="item"></app-iconslist>
+                        <app-iconslist [childdata]="item" (changeNoteStatus)="refreshUpdatedNoteData($event)"></app-iconslist>
                     </div>
                     <!-- <div fxFlex="20" fxLayoutAlign="end center">
                 <button class="addnote" mat-button>

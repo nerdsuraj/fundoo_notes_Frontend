@@ -27,4 +27,7 @@ export class TrashComponent implements OnInit {
     })
   }
 
+  recievedUpdatedData(trashData: any) {
+    this.getTrashNotesList();
+  }
 }
