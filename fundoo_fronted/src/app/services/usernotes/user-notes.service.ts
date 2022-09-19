@@ -73,6 +73,17 @@ export class UserNotesService {
 
   }
 
+  //color note
+  changeNoteColor(noteColorData: any,id: any){
+
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': " br " + this.token,
+      })
+    }
+    return this.httpService.put("notes/"+ id +"/color",noteColorData,true, httpOptions) 
+  }
 
 
 

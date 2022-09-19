@@ -1,17 +1,21 @@
 .conati{
-    display: flex;
+   
+    display: flex; 
     flex-wrap: wrap;
-    margin-left: 3%;
+    /* border: solid red; */
+    padding-left: 6%;
   
 }
 
 
 .maincon{
-    /* border: 1px solid red; */
+   
     display: flex;
     flex-wrap: wrap;
     margin-top: 1%; 
     height: fit-content;
+    /* border: solid black; */
+   
    
    
 }
@@ -20,7 +24,7 @@
     /* border: 2px solid lightcoral; */
 }
 .matcard{
-    /* border: 2px solid black; */
+    /* border: 2px solid green; */
     box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.3);
   
 }

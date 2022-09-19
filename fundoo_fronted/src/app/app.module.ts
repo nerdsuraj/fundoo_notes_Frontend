@@ -20,6 +20,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
@@ -63,7 +64,7 @@ import { FilterPipe } from './pipe/search/filter.pipe';
     MatButtonModule,
     MatCheckboxModule,
     ReactiveFormsModule,FormsModule,FlexLayoutModule,HttpClientModule,MatToolbarModule,
-    MatSnackBarModule,MatSidenavModule,MatListModule,MatIconModule,MatMenuModule,MatDialogModule
+    MatSnackBarModule,MatSidenavModule,MatListModule,MatIconModule,MatMenuModule,MatDialogModule,MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

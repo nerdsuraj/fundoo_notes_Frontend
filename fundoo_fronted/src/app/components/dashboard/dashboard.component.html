@@ -31,8 +31,9 @@
     </div>
 
     <!-- tool bar icons -->
-    <div fxFlex="20" class="settingbtn"  fxLayoutAlign="center center" >
+    <div fxFlex="20" class="settingbtn"  fxLayoutAlign="center center" fxLayoutGap="10px">
 
+      <mat-slide-toggle></mat-slide-toggle>
       <!-- refresh butto -->
 
       <button mat-icon-button color="basic" id="refresh" matTooltip="Refresh" (click)="refresh()">
@@ -50,7 +51,7 @@
 
       <!-- settings button  -->
 
-      <button mat-icon-button [matMenuTriggerFor]="menu" colour="basic" matTooltip="settings">
+      <button mat-icon-button [matMenuTriggerFor]="menu" colour="basic" matTooltip="settings" fxHide.xs="100">
         <mat-icon class="setting">
           <img class="appsview" src="../../../assets/img/setting.png" />
         </mat-icon>
@@ -63,7 +64,7 @@
       </mat-menu>
     </div>
       <!-- app routs to appilaction links -->
-<div class="appwithimage" fxLayoutAlign="space-between center" fxLayout="row" >
+<div class="appwithimage" fxLayoutAlign="space-between center" fxLayout="row"  >
   
       <button mat-icon-button color="basic" matTooltip="Apps" [matMenuTriggerFor]="apps" class="app">
         <mat-icon>

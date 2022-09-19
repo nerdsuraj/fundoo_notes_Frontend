@@ -31,7 +31,7 @@
         <!-- icons -->
         <div fxLayout="row" fxLayoutAlign="start center" class="takenoteicons">
             <div fxFlex="100" class="applist">
-                <app-iconslist [card]="data"></app-iconslist>
+                <app-iconslist [card]="data" (updateColor)="refreshUpdatedNoteData($event)"></app-iconslist>
             </div>
             <div fxFlex="20" fxLayoutAlign="end center" (click)="close">
                 <button class="addnote" mat-button (click)="closeDialog()">

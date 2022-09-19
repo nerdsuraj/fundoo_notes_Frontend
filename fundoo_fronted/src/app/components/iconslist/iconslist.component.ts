@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UserNotesService } from 'src/app/services/usernotes/user-notes.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { NoteColorModel } from 'src/app/model/noteColor';
 
 @Component({
   selector: 'app-iconslist',
@@ -12,6 +13,7 @@ export class IconslistComponent implements OnInit {
   @Output() color = new EventEmitter();
   @Input() childdata: any;
   @Output() changeNoteStatus = new EventEmitter<any>();
+  @Output() updateColor = new EventEmitter<any>();
 
   isArchive: any;
   isTrash: any;
@@ -41,6 +43,17 @@ export class IconslistComponent implements OnInit {
     ]
   ];
 
+  noteColor:any;
+  // !: NoteColorModel;
+
+  // noteType(): NoteColorModel {
+  //   return this.noteColor = {
+  //     Id: "",
+  //     newColor: "",
+  //   }
+  // }
+
+  // @Input() noteColorInput: NoteColorModel = this.noteType();
 
   constructor(private UserNotesService: UserNotesService, private snackbar: MatSnackBar) { }
 
@@ -115,7 +128,27 @@ export class IconslistComponent implements OnInit {
 
 
 
-
+//change the note color
+changeNotesColor(newColor: any) { 
+  console.log(newColor);
+  let requestData = {
+    'color': newColor,
+  }
+  // if (typeof (this.childdata._id) !== 'undefined') {
+    // this.noteColorInput.Id = this.childdata._id;
+    // this.noteColorInput.newColor = newColor;
+    // this.childdata.color = newColor;
+    this.UserNotesService.changeNoteColor(requestData,this.childdata._id).subscribe((response: any) => {
+      console.log("Note Color Changed Successfully", response);
+      this.changeNoteStatus.emit(response);
+      // this.updateColor.emit(this.childdata);
+    })
+  // }
+  // else{
+  //   this.childdata.Color = newColor;
+  //   this.changeNoteStatus.emit(this.childdata);
+  // }
+}
 
 
 

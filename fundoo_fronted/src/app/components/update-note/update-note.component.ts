@@ -53,4 +53,19 @@ closeDialog()
 }
 
 
+//color note
+refreshUpdatedNoteData(newNoteData: any) {
+  // if(newNoteData.success === false){ 
+  //   // console.log("After updation", this.data)
+  // }
+  // else if (newNoteData?.[0] != null) {
+  //   console.log(this.data)
+  //   // this.data.imageList.push(newNoteData?.[0])
+  //   // console.log("After updation", this.data)
+  // }
+  // else {
+  //   this.data.color = newNoteData.color
+  // }
+}
+
 }

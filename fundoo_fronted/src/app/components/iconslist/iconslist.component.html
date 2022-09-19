@@ -1,4 +1,4 @@
-<div   class="iconsdiv" fxLayoutAlign="space-between end" fxLayout="row" fxFlex="65">
+<div   class="iconsdiv" fxLayoutAlign="space-between end" fxLayout="row" fxFlex="45">
     <button id="Remaind" matTooltip="Remind me" mat-icon-button *ngIf="!isTrash" >
         <mat-icon>
             <img id="img" class="imgicons" src="../../../assets/img/icons/reminder.png" />
@@ -23,7 +23,7 @@
         <div fxLayout="row" fxLayoutGap="10px" style="margin-top: 3px" *ngFor="let colors of colorArray">
           <div *ngFor="let color of colors">
             <button class="colors" [ngStyle]="{ 'background-color': color.color }"
-                mat-mini-fab></button>
+                mat-mini-fab (click)="changeNotesColor(color.color)"></button>
           </div>
         </div>
       </div>

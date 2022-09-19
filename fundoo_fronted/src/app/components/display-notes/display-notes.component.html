@@ -1,8 +1,8 @@
 <!-- <div class="container" style="border:solid red" fxLayout="row wrap">
     <div fxLayout="row" fxLayoutAlign="start center" fxLayout.xs="column" style="border:solid blue"> -->
-        <div fxLayout="row" fxLayoutAlign="start start" class="conati" fxLayoutGap="20">
-        <div class="maincon" fxLayout="row" fxFlex="22" fxFlex.xs="100"  *ngFor="let item of items | filter : searchString" >
-            <mat-card fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" class="matcard"  fxLayout="column">
+        <div fxLayoutAlign="row" fxLayoutAlign="start start"  fxFlex.xs="100" class="conati" fxLayoutGap="25" >
+        <div class="maincon" fxLayout="row"  fxFlex.xs="100"  *ngFor="let item of items | filter : searchString" >
+            <mat-card fxFlex="100" fxFlex.xs="100" fxFlex.sm="100" class="matcard"  fxLayout="column" [ngStyle]="{ 'background-color': item.color }">
                 <div fxLayout="row" fxLayoutAlign="space-between center" class="cardimagediv" fxFlex="80">
                     <div class="lines">
 
@@ -32,15 +32,8 @@
 
 
                 <!-- icons -->
-                <div fxLayout="row" fxLayoutAlign="start center" class="takenoteicons">
-                    <div fxFlex="80" class="applist">
+                <div fxLayout="row" fxLayoutAlign="start center" class="takenoteicons" >
                         <app-iconslist [childdata]="item" (changeNoteStatus)="refreshUpdatedNoteData($event)"></app-iconslist>
-                    </div>
-                    <!-- <div fxFlex="20" fxLayoutAlign="end center">
-                <button class="addnote" mat-button>
-                    
-                </button>
-            </div> -->
                 </div>
             </mat-card>
         </div>
